@@ -1,17 +1,21 @@
+<!DOCTYPE html>
+
+<meta name="robots" content="noindex">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-<title>Tourism</title>
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/mobile.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/controllers/ctr1.js"></script>
+<meta charset=utf-8 />
+<title>Tourism</title>
 
 </head>
-<body>
+<body ng-app='ModalDemo'>
+<div ng-controller='MyCtrl'>
 <div id="header">
-<div id="logo"><img src="img/logo.png" width="80" height="80" class="logonoir" alt="Sri Lankn Logo" /></div>
+	<div id="logo"><img src="img/logo.png" width="80" height="80" class="logonoir" alt="Sri Lankn Logo" />
+</div>
 <div id="logotexte">Tourism Title<br /><span>Title Description</span></div>
 <div id="menu">
         <a href="" target="_blank">Blog</a>
@@ -21,9 +25,11 @@
 </div>
 
 <div id="grid">
+
 <div class="left">
-	<div class="projet projet01">
-        	<div class="fond"><img src="img/Anuradhapura.jpg" width="700" height="257" alt="Anuradhapura" /></div>
+	
+	<div class="projet" >
+        	<div class="fond" ng-click='toggleModal()'><img src="img/Anuradhapura.jpg" width="700" height="257" alt="Anuradhapura" /></div>
             <h2>Anuradhapura</h2>
           
 	</div>
@@ -31,14 +37,24 @@
 </div>
 <div class="right">
 
-	 <div class="projet projet02">
+	 <div class="projet">
         	<div class="fond"><div><img src="img/Bambarakanda.jpg" width="700" height="557" alt="Van Houtte Coffee Services"/></div></div>
             <h2>Bambarakanda</h2>
           
      </div>
-<div>
 </div>
+ 
+
+</div>
+
+
+ <modal-dialog show='modalShown' width='80%' height='80%'>
+      <p>Modal Content Goes here<p>
+ </modal-dialog> 
+  
+  
+</div>  
+  
+
 </body>
-
-</head>
-
+</html>

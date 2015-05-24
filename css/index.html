@@ -1,0 +1,131 @@
+<html>
+<head ng-app="mymodal">
+<meta http-equiv="Content-Type" content="text/html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>Tourism</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/mobile.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+<style id="jsbin-css">
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.8;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+</style>
+
+</head>
+<body ng-app='ModalDemo'>
+<div id="header">
+<div id="logo"><img src="img/logo.png" width="80" height="80" class="logonoir" alt="Sri Lankn Logo" /></div>
+<div id="logotexte">Tourism Title<br /><span>Title Description</span></div>
+<div id="menu">
+        <a href="" target="_blank">Blog</a>
+        <span class="lienabout">About</span>
+        <span class="liencontact">Contact</span>
+</div>
+</div>
+
+<div id="grid">
+
+<div class="left">
+	
+	<div class="projet">
+        	<div class="fond"><img src="img/Anuradhapura.jpg" width="700" height="257" alt="Anuradhapura" /></div>
+            <h2>Anuradhapura</h2>
+          
+	</div>
+
+</div>
+<div class="right">
+
+	 <div class="projet">
+        	<div class="fond"><div><img src="img/Bambarakanda.jpg" width="700" height="557" alt="Van Houtte Coffee Services"/></div></div>
+            <h2>Bambarakanda</h2>
+          
+     </div>
+</div>
+
+</div>
+
+ <div ng-controller='MyCtrl'>
+    <button ng-click='toggleModal()'>Open Modal Dialog</button>
+    <modal-dialog show='modalShown' width='400px' height='60%'>
+      <p>Modal Content Goes here<p>
+    </modal-dialog>
+  </div>
+<script id="jsbin-javascript">
+app = angular.module('ModalDemo', []);
+app.directive('modalDialog', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      show: '='
+    },
+    replace: true, // Replace with the template below
+    transclude: true, // we want to insert custom content inside the directive
+    link: function(scope, element, attrs) {
+      scope.dialogStyle = {};
+      if (attrs.width)
+        scope.dialogStyle.width = attrs.width;
+      if (attrs.height)
+        scope.dialogStyle.height = attrs.height;
+      scope.hideModal = function() {
+        scope.show = false;
+      };
+    },
+    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+  };
+});
+
+app.controller('MyCtrl', ['$scope', function($scope) {
+  $scope.modalShown = false;
+  $scope.toggleModal = function() {
+    $scope.modalShown = !$scope.modalShown;
+  };
+}]);
+</script>
+
+</body>
+
+</head>
+
