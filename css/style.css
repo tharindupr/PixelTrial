@@ -59,5 +59,49 @@ body {
 	cursor:pointer;
 }
 
+#logo {
+	width:80px;
+	height:80px;
+	float:left;	
+	margin-right:20px;
+	cursor:pointer;
+}
+
+#logotexte {
+	width:250px;
+	height:65px;
+	margin-top:15px;
+	float:left;
+	font-family:"Effra W01 Bold", Arial, sans-serif;
+	font-weight:normal;
+	font-size:18px;
+	color:#000;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	transition: color 0.3s 2.4s ease-out;
+	cursor:pointer;
+}
+
+#logotexte span {
+	font-family:"Effra W01 Regular", Arial, sans-serif;
+	font-size:13px;
+	color:#000;
+	opacity:0.4;
+	font-weight:normal;
+	letter-spacing:1px;
+    transition: color 0.3s 2.4s ease-out;
+}
 
 
+/* Home Page */
+
+#grid {
+	position:absolute;
+	width:78%;
+	max-height:auto;	
+	left:11%;
+	z-index:1;
+	top:200px;
+	opacity:1;
+	transition: max-height 0s 2.3s ease-out, top 1.5s cubic-bezier(0.260, 0.010, 0.000, 1.005), opacity 1.4s ease-out;
+}

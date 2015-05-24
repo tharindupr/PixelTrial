@@ -29,4 +29,34 @@
 		line-height:22px;
 	}
 	
+	#logo {
+		position:absolute;
+		left:50%;
+		margin-left:-30px;	
+	}
+	
+	#logotexte {
+		position:absolute;
+		top:80px;
+		text-align:center;
+		width:100%;
+		height:65px;
+		margin-top:15px;
+		font-size:20px;
+	}
+			
+	#logotexte span {
+		font-size:14px;
+	}
+	
+	#grid {
+		top:300px;	
+	}
+	
+	.left, .right {
+		float:none;
+		width:100%;
+		margin:0;
+	}
+	
 }
