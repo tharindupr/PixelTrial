@@ -4,15 +4,17 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/mobile.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/controllers/ctr1.js"></script>
+<link href="css/popup.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/popup.js"></script>
 <meta charset=utf-8 />
 <title>Tourism</title>
 
 </head>
-<body ng-app='ModalDemo'>
-<div ng-controller='MyCtrl'>
+<body>
+<div>
 <div id="header">
 	<div id="logo"><img src="img/logo.png" width="80" height="80" class="logonoir" alt="Sri Lankn Logo" />
 </div>
@@ -29,7 +31,7 @@
 <div class="left">
 	
 	<div class="projet" >
-        	<div class="fond" ng-click='toggleModal()'><img src="img/Anuradhapura.jpg" width="700" height="257" alt="Anuradhapura" /></div>
+        	<div class="fond"><img src="img/Anuradhapura.jpg" width="700" height="257" alt="Anuradhapura" /></div>
             <h2>Anuradhapura</h2>
           
 	</div>
@@ -47,11 +49,17 @@
 
 </div>
 
+<div id="boxes">
+  <div style="top: 500.5px; left: 551.5px; display: none;" id="dialog" class="window"> Anuradhapura
+    <div id="lorem">
+      <p></p>
+    </div>
+    
+  </div>
+  <div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+</div>
 
- <modal-dialog show='modalShown' width='80%' height='80%'>
-      <p>Modal Content Goes here<p>
- </modal-dialog> 
-  
+
   
 </div>  
   
