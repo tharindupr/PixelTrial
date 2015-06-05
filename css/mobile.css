@@ -1,4 +1,4 @@
-@media screen and (max-width: 960px){
+@media screen and (max-width: 960px){ 
 	body { 
 		overflow-x: hidden;
 	}
@@ -69,5 +69,7 @@
 	.projet:hover h2 {
 		margin: -16px 0 15px 15px;
 	}
+	
+	
 	
 }

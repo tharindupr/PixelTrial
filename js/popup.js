@@ -1,9 +1,16 @@
 $(document).ready(function() {	
  $(".projet").click(function() {
+		$('#boxes').focus();
 		if(jQuery(this).attr("id")=="anuradhapura")
 			var id = '#dialog';
 		if(jQuery(this).attr("id")=="bambarakanda")
 			var id = '#dialog1';
+		if(jQuery(this).attr("id")=="nuwaraeliya")
+			var id = '#dialog2';
+		if(jQuery(this).attr("id")=="polonnaruwa")
+			var id = '#dialog4';
+		if(jQuery(this).attr("id")=="trincomale")
+			var id = '#dialog3';
 	
 		//Get the screen height and width
 		var maskHeight = $(document).height();
@@ -23,7 +30,10 @@ $(document).ready(function() {
 		//Set the popup window to center
 		$(id).css('top',  winH/2-$(id).height()/2);
 		$(id).css('left', winW/2-$(id).width()/2);
+		
+		 $('#id').focus();
 	
+		$(id).css('margin-top',100);
 		//transition effect
 		$(id).fadeIn(2000); 	
 	
