@@ -8,10 +8,9 @@
 }  
 #boxes .window {
   position:absolute;
-
   top:10%;
   width:60%; 
-  height:120%;
+  height:130%;
  
   background-color:#ffffff;
   font-family: 'Segoe UI Light', sans-serif;
@@ -42,17 +41,8 @@
 #popupfoot a{
 	text-decoration: none;
 }
-.agree:hover{
-  background-color: #D1D1D1;
-}
-.popupoption:hover{
-	background-color:#D1D1D1;
-	color: green;
-}
-.popupoption2:hover{
-	
-	color: red;
-}
+
+
 
 
 

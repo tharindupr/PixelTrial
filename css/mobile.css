@@ -69,11 +69,23 @@
 	.projet:hover h2 {
 		margin: -16px 0 15px 15px;
 	}
-	video {
-  width: 100%    !important;
-  height: auto   !important;
+	
+	#my-content { display: none; } 
+	
+	#boxes .window {
+	  position:absolute;
+	  top:10%;
+	  width:60%; 
+	  height:200%;
+	 
+	  background-color:#ffffff;
+	  font-family: 'Segoe UI Light', sans-serif;
+	  font-size: 15pt;
+	  display:none;
+	  z-index:9999;
+	  
+	  border-radius: 15px;
+	  text-align: center;
 }
-	
-	
 	
 }
