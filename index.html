@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 
-<meta name="robots" content="noindex">
+
+<meta name="viewport" content="width=20vw, initial-scale=1">
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/mobile.css" rel="stylesheet" type="text/css" />
 <link href="css/popup.css" rel="stylesheet" type="text/css" />
+<link href="css/button.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/popup.js"></script>
 <meta charset=utf-8 />
 <title>Tourism</title>
 
 </head>
-<body>
+<body ng-app="">
+
 <div>
+
 <div id="header">
+	
 	<div id="logo"><img src="img/logo.png" width="80" height="80" class="logonoir" alt="Sri Lankn Logo" />
 </div>
 <div id="logotexte">Pixel Trial<br /><span>Before visiting Sri Lanka</span></div>
@@ -24,13 +30,17 @@
         <span class="lienabout">About</span>
         <span class="liencontact">Contact</span>
 </div>
+
 </div>
+
+<!--HTML 5 SVG Tag to draw two Lines -->
+
 
 <div id="grid">
 
 <div class="left">
 	
-	<div class="projet" id="anuradhapura">
+	<div class="projet projet01" id="anuradhapura">
         	<div class="fond"><img src="img/Anuradhapura.jpg" width="700" height="257" alt="Anuradhapura" /></div>
             <h2>Anuradhapura</h2>
           
@@ -39,7 +49,7 @@
 </div>
 <div class="right">
 
-	 <div class="projet" id="bambarakanda">
+	 <div class="projet projet02" id="bambarakanda">
         	<div class="fond"><div><img src="img/Bambarakanda.jpg" width="700" height="557" alt="Bambarakanda"/></div></div>
             <h2>Bambarakanda</h2>
           
@@ -48,7 +58,7 @@
 
 <div class="left">
 	
-	<div class="projet" id="nuwaraeliya">
+	<div class="projet projet03" id="nuwaraeliya">
         	<div class="fond"><img src="img/nuwaraeliya.jpg" width="700" height="257" alt="Nuwaraeliya" /></div>
             <h2>Nuwara Eliya</h2>
           
@@ -57,7 +67,7 @@
 </div>
 <div class="right">
 
-	 <div class="projet" id="polonnaruwa">
+	 <div class="projet projet04" id="polonnaruwa">
         	<div class="fond"><div><img src="img/Polonnaruwa.jpg" width="700" height="557" alt="Polonnaruwa"/></div></div>
             <h2>Polonnaruwa</h2>
           
@@ -66,7 +76,7 @@
 
 <div class="left">
 	
-	<div class="projet" id="trincomale">
+	<div class="projet projet05" id="trincomale">
         	<div class="fond"><img src="img/Trincomalee.jpg" width="700" height="257" alt="Trinoc" /></div>
             <h2>Trincomale</h2>
           
@@ -81,7 +91,9 @@
          
         </div>
 		<div class="legal">
-		© 2015 All rights reserved. Tharindu Prabhath Ranathunga.
+		© 2015 All rights reserved. Tharindu Prabhath Ranathunga. 
+		2012cs112 
+		1001122
         </div>
 		
         
@@ -90,50 +102,134 @@
 </div>
 
 <div id="boxes">
-  <div style="display: none;" id="dialog" class="window"> Anuradhapura
+  <div style="display: none;" id="dialog" class="window"> <H2>Anuradhapura</H2>
     <div id="lorem">
-      <p>
+	  <br>
+      <article>
+	  <center>
 	  Anuradhapura was the greatest monastic city of the ancient world and the heart of Sri Lankan civilisation for over a millennium.
 
 	  At its height it was home to tens of thousands of monks at dozens of monasteries and served by a lay population which records suggest could have numbered nearly two million. 
 	  Its flourishing Buddhist culture and architectural achievements made it famous across Asia and as far afield as Europe, while even today the sheer scale of its surviving ruins and stupas is breathtaking.
-	  </p>
+	  </center>
+	  </br>
+	  </article>
 	  <center>
-	  <video width="400" controls>
+	  <div >
+	  <video width="400" controls id="my-content">
 	  <source src="img/A_Video.mp4" type="video/mp4">
 	
 	  Your browser does not support HTML5 video.
 	  </video>
+	  </div>
+	 
+	  </br>
+	   <a class="btn" href="http://pexeltrailsanjeewa.16mb.com/sanjeewa-cs110/12001104page.html">
+        <span>Read More</span>
+	   </a>
 	  </center>
+	  
     </div> 
     
   </div>
 
   
-  <div style="display: none;" id="dialog1" class="window"> Bambarakanda
+  <div style="display: none;" id="dialog1" class="window"><H2> Bambarakanda</H2>
     <div id="lorem">
-      <p></p>
+		<br>
+      <article>
+	  <center>
+	  Bambarakanda is the highest waterfall in Sri Lanka with a sheer drop of a 263 meters. In the world ranking its the 299th tallest waterfall in the world. The fall lies in the Badulla District among a evergreen forest in the Kalupahana Area.
+
+This is not a wide waterfall but drops as a thin line from a rocky outcrop. The fall is formed by the Uduweriya Haputale mountain and Kuda Oya, a tributary of Walawe River.
+	  </center>
+	  </article>
+	  <br>
+	  <center>
+			<div ng-init="resturents = [{name:'Glace Pastry & Bakery', phone:'0710554644'},
+									 {name:'Kamuko', phone:'0710644588'},
+									 {name:'Happy Inn', phone:'0825546440'},
+									 {name:'Olympus Plaza Hotel', phone:'0777210223'},
+									 {name:'Prabha Inn', phone:'0710654589'},
+									 {name:'Fall Inn', phone:'0210896542'}]"></div>
+
+			<label><h3>Search: </h3><input ng-model="searchText"></label>
+			<table id="searchTextResults">
+			  <tr><th>Resturent</th><th>Phone</th></tr>
+			  <tr ng-repeat="friend in resturents | filter:searchText">
+				<td>{{friend.name}}</td>
+				<td>{{friend.phone}}</td>
+			  </tr>
+			</table>
+		</br>
+	   <a class="btn">
+        <span>Read More</span>
+	   </a>	
+	  </center>
+	  
+	  
+	  
+	  
     </div>
     
   </div>
   
-  <div style="display: none;" id="dialog2" class="window"> Nuwaraeliya
+  <div style="display: none;" id="dialog2" class="window"> <h2>Nuwaraeliya</h2>
     <div id="lorem">
-      <p></p>
+      <p>
+	  <center>
+	  Nuwara Eliya is often referred to by the Sri Lankan tourist industry as ‘Little England’. While most British visitors struggle to recognise modern England in Nuwara Eliya, the toy-town ambience does have a rose-tinted English country village feel to it, though it comes with a disorienting surrealist edge. Three-wheelers whiz past red telephone boxes. Water buffalo daubed in iridescent dye for the Tamil Thai Pongal festival mingle outside a pink, brick Victorian post office. A well-tended golf course morphs seamlessly into a rolling carpet of tea plantations. The dusty and bustling centre of town is a thoroughly Sri Lankan tangle, but scratch the surface a little to reveal colonial bungalows, well-tended hedgerows and pretty rose gardens.
+
+	  </p>
+	  
+	  </br>
+	   <a class="btn">
+        <span>Read More</span>
+	   </a>
+	   
+	  </center>
     </div>
     
   </div>
   
   <div style="display: none;" id="dialog3" class="window"> Trincomale
     <div id="lorem">
-      <p></p>
+      <p>
+	  <center>
+	  Trincomalee is a port city on the east coast of Sri Lanka. The city is located on a peninsula, which divides the inner and outer harbours.Trincomalee is an anglicized version of the Tamil word Tirukonamalai (which means "lord of the sacred hill"); it is a hill situated in the end of a natural land formation that resembles an arc. It is one of the main where Tamil is spoken at large scale. Historically referred to as Gokanna or Gokarna it has been a sea port that has played a major role in maritime and international trading history of Sri Lanka.
+
+The Bay of Trincomalee provides security and is openly accessible to all types of sea crafts in all weathers. The beaches are used for recreational purposes such as surfing, scuba diving, fishing and whale watching. The city is renowned for housing the largest Dutch fort in Sri Lanka. It is home to major Sri Lankan naval bases and a Sri Lankan Air Force base. 
+	  </p>
+	  
+	  </br>
+	   <a class="btn">
+        <span>Read More</span>
+	   </a>
+	    </center>
+		
+		
     </div>
     
   </div>
   
-  <div style="display: none;" id="dialog4" class="window"> Polonnaruwa
+  <div style="display: none;" id="dialog4" class="window"> <h2>Polonnaruwa</h2>
     <div id="lorem">
-      <p></p>
+	  <center>
+      <p>
+	  Kings ruled the central plains of Sri Lanka from Polonnaruwa 800 years ago, when it was a thriving commercial and religious centre. From here, free-marketeers haggled for rare goods and the pious prayed at any one of its numerous temples. The glories of that age can be found in archaeological treasures which give a pretty good idea of how the city looked in its heyday. You'll find the archaeological park a delight to explore, with hundreds of ancient structures – tombs and temples, statues and stupas – in a compact core. The Quadrangle alone is worth the trip.
+That Polonnaruwa is close to elephant-packed national parks only adds to its popularity. And the town itself makes a pleasant base for a day or two, fringed by a huge, beautiful tank with a relaxed ambience.
+
+
+
+	  
+	  
+	  </p>
+	  
+	  </br>
+	   <a class="btn">
+        <span>Read More</span>
+	   </a>
+	   </center>
     </div>
     
   </div>

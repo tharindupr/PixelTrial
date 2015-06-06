@@ -1,5 +1,12 @@
 $(document).ready(function() {	
  $(".projet").click(function() {
+ 
+		   $(window).scrollTop($(window).scrollTop()-10000);
+			
+			
+
+ 
+ 
 		$('#boxes').focus();
 		if(jQuery(this).attr("id")=="anuradhapura")
 			var id = '#dialog';
